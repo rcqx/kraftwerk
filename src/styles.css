@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: red;
+}
+
+img {
+  width: 450px;
+  height: auto;
+}
+
+#albums {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
