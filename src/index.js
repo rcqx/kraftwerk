@@ -15,6 +15,12 @@ const albumsIds = [
   'ee5f888d-2734-3ace-a25b-b6f9f39ca147',
 ];
 
+for (let i = 0; i < albumsIds.length; i++) {
+  fetchCover(albumsIds[i]).then((imageUrl) => {
+    displayImages(imageUrl)
+  })
+}
+
 // const test = fetch('https://musicbrainz.org/ws/2/release?artist=5700dcd4-c139-4f31-aa3e-6382b9af9032&type=album|ep&fmt=json')
 //   .then(response => response.json())
 //   .then(data => {
@@ -27,9 +33,3 @@ const albumsIds = [
 //   .then(data => {
 //     data.aliases.forEach(item => console.log(item.name))
 //   });
-
-for (let i = 0; i < albumsIds.length; i++) {
-  fetchCover(albumsIds[i]).then((imageUrl) => {
-    displayImages(imageUrl)
-  })
-}

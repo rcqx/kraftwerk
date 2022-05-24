@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+
 body {
   background-color: black;
+  font-family: 'Major Mono Display', monospace;
 }
 
 h1 {
@@ -16,4 +19,20 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.wrapper h1 {
+  margin-left: 2.65em;
+  font-size: 2.5em;
+}
+
+img {
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+}
+
+img:hover {
+  transform: scale(0.95);
+  cursor: pointer;
 }
