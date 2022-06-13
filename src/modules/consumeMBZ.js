@@ -1,7 +1,10 @@
-// const kraftwerkID = '5700dcd4-c139-4f31-aa3e-6382b9af9032';
+async function fetchTitle(id) {
+  const connect = await fetch(`https://musicbrainz.org/ws/2/release/${id}?inc=aliases%2Bartist-credits%2Blabels%2Bdiscids%2Brecordings&fmt=json`);
+  const response = await connect.json().then(data => {
+    const titleName = data.title;
+    return titleName;
+  });
+  return response;
+}
 
-const test = fetch('https://musicbrainz.org/ws/2/artist/5700dcd4-c139-4f31-aa3e-6382b9af9032?inc=aliases&fmt=json')
-  // .then(response => response.text())
-  .then(data => console.log(data));
-
-export default test;
+export default fetchTitle;

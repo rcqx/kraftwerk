@@ -92,3 +92,6 @@ img:hover {
   display: none;
 }
 
+header p {
+  cursor: pointer;
+}
